@@ -5,11 +5,15 @@
   "scripts": {
     "start": "remotion studio",
     "render": "remotion render",
+    "qr": "node scripts/generate-qr.mjs",
+    "render:overlay:light": "remotion render QrOverlay-Light out/qr-overlay-light.mov --codec=prores --prores-profile=4444 --image-format=png --pixel-format=yuva444p10le",
+    "render:overlay:dark": "remotion render QrOverlay-Dark out/qr-overlay-dark.mov --codec=prores --prores-profile=4444 --image-format=png --pixel-format=yuva444p10le",
     "upgrade": "remotion upgrade"
   },
   "dependencies": {
     "@remotion/cli": "4.0.529",
     "@remotion/renderer": "4.0.529",
+    "qrcode": "^1.5.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "remotion": "4.0.529"
